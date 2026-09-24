@@ -16,6 +16,7 @@
   --page-bg: #ffffff;
   --surface-muted: #f5f5f5;
   --text-secondary: #595959;
+  --error: #c8201a;
 
   --border: rgba(0, 0, 0, 0.1);
   --border-soft: rgba(0, 0, 0, 0.06);
@@ -1053,6 +1054,9 @@ h3 {
   width: var(--load);
   border-radius: var(--r-pill);
   background: var(--brand-cyan-200);
+}
+
+.slot__fill {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.55);
 }
 
@@ -1563,7 +1567,7 @@ h3 {
 
 .field input[aria-invalid="true"],
 .field select[aria-invalid="true"] {
-  border: 2px solid var(--brand-black);
+  border: 2px solid var(--error);
   padding-inline: 15px;
 }
 
@@ -1572,6 +1576,7 @@ h3 {
   align-items: flex-start;
   gap: 8px;
   margin-top: 8px;
+  color: var(--error);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
@@ -1598,16 +1603,14 @@ h3 {
   font-size: 14px;
 }
 
-.form-success {
-  padding: 20px;
-  border-radius: var(--r-md);
-  background: var(--brand-cyan-100);
-  border: 1px solid var(--border);
+.form-card.is-sent {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  text-align: center;
 }
 
-.form-success p {
-  margin: 8px 0 16px;
-  font-size: 15px;
+.form-card.is-sent .form-card__intro {
+  max-width: 40rem;
 }
 
 /* Footer */
@@ -1999,7 +2002,7 @@ h3 {
   .form-card {
     grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
     column-gap: clamp(40px, 5vw, 80px);
-    align-items: center;
+    align-items: start;
   }
 
   .form-card__intro {

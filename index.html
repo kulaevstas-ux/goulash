@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   <title>Goulash.tech — Доставка под контролем. Даже в час пик</title>
   <meta name="description" content="Заказы, кухня и курьеры в одной системе для сетей доставки роллов и пиццы.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3C/svg%3E">
+  <link rel="icon" href="./assets/favicon.ico" sizes="48x48">
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
 </head>
@@ -615,24 +615,52 @@
         <div class="faq">
           <details class="faq__item">
             <summary>
-              <span>Это настоящий интерфейс Goulash?</span>
+              <span>Что такое Goulash Tech и для кого он подходит?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </summary>
-            <p>Это авторская визуализация возможностей продукта для тестового задания. Данные условные, интерфейс не является точной копией действующей системы.</p>
+            <p>Goulash.tech — SaaS-платформа для ресторанов и сетей с доставкой. Она закрывает весь цикл: приём заказа через приложение, сайт, оператора или агрегатора, работу кухни, маршрутизацию курьеров, программу лояльности и аналитику. Подходит заведениям с циклом приготовления до 30 минут — от одной точки до федеральной сети.</p>
           </details>
           <details class="faq__item">
             <summary>
-              <span>Система гарантирует отсутствие задержек?</span>
+              <span>Сколько времени занимает подключение?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </summary>
-            <p>Нет. Планирование помогает видеть ограничения кухни и доставки. При недостатке ресурсов расчетное время выполнения новых заказов может увеличиваться.</p>
+            <p>Минимальная настройка занимает от 7 дней, полный переход сети — в среднем 21 день. Срок зависит от количества точек, набора модулей и интеграций с вашей POS-системой.</p>
           </details>
           <details class="faq__item">
             <summary>
-              <span>Как узнать условия подключения?</span>
+              <span>Нужно ли гостю скачивать приложение, чтобы сделать заказ?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </summary>
-            <p>Стоимость, сроки и интеграции для конкретной сети нужно обсуждать с командой Goulash. Этот демонстрационный лендинг не устанавливает условия внедрения.</p>
+            <p>Нет. Заказ можно оформить на сайте, в мобильном приложении, через оператора колл-центра или агрегатора. Приложение даёт больше: push-уведомления, бонусы и историю заказов.</p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              <span>Есть ли интеграция с агрегаторами доставки?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>Да. Заказы из агрегаторов попадают в общий контур: их видит кухня, они учитываются в аналитике и стоп-листах, а курьеры распределяются единым алгоритмом маршрутизации.</p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              <span>Можно ли управлять несколькими точками из одного кабинета?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>Да. В одном кабинете доступны все точки сети: меню, цены, зоны доставки, стоп-листы, графики персонала и сводная аналитика с разбивкой по заведениям.</p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              <span>Есть ли система лояльности для гостей?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>Да. Бонусные счета, промокоды, персональные акции и RFM-сегментация встроены в платформу — отдельный сервис лояльности подключать не нужно.</p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              <span>Как работает техническая поддержка?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>За каждым клиентом закреплён персональный менеджер. Техподдержка работает в режиме, предусмотренном тарифом, вплоть до 24/7, с доступом к базе знаний и видеоинструкциям.</p>
           </details>
         </div>
       </div>
@@ -643,12 +671,13 @@
         <div class="container">
           <div class="form-card">
             <div class="form-card__intro">
-              <h2 id="request-title">Что произойдет в вашей сети<br> в следующую пятницу?</h2>
+              <h2 id="request-title" tabindex="-1">Ваша доставка выдержит пятницу?</h2>
               <div id="form-preface">
-                <p class="feature__lead">Начните с вашей ситуации: сколько у вас точек и как связаны кухня и доставка.</p>
+                <p class="feature__lead">Узнайте, как Goulash.tech помогает держать под контролем заказы, кухню и курьеров даже в часы пик. Оставьте заявку — мы покажем продукт на примере вашего бизнеса</p>
               </div>
+              <p class="feature__lead" id="form-success" hidden>Спасибо! Мы свяжемся с вами в ближайшее время, чтобы договориться о демонстрации.</p>
             </div>
-            <div class="form-card__main">
+            <div class="form-card__main" id="form-main">
               <form id="lead-form" method="post" action="" novalidate onsubmit="return false;" aria-labelledby="request-title">
                 <div id="form-fields">
                   <div class="field">
@@ -724,11 +753,6 @@
                     <span class="spinner" id="lead-spinner" hidden aria-hidden="true"></span>
                     <span id="lead-submit-label">Запросить демонстрацию</span>
                   </button>
-                </div>
-                <div class="form-success" id="form-success" hidden>
-                  <h3 tabindex="-1" id="form-success-title">Заявка отправлена</h3>
-                  <p>Спасибо! Мы свяжемся с вами в ближайшее время, чтобы договориться о демонстрации.</p>
-                  <button class="btn btn--secondary" id="form-again" type="button">Отправить еще одну заявку</button>
                 </div>
               </form>
             </div>

@@ -433,13 +433,13 @@
     var submitBtn = document.getElementById("lead-submit");
     var submitLabel = document.getElementById("lead-submit-label");
     var spinner = document.getElementById("lead-spinner");
-    var fields = document.getElementById("form-fields");
     var preface = document.getElementById("form-preface");
     var success = document.getElementById("form-success");
-    var successTitle = document.getElementById("form-success-title");
+    var card = form.closest(".form-card");
+    var main = document.getElementById("form-main");
+    var title = document.getElementById("request-title");
     var errorBox = document.getElementById("form-error");
     var errorTitle = document.getElementById("form-error-title");
-    var againBtn = document.getElementById("form-again");
     var state = "idle";
 
     function setFieldError(input, message) {
@@ -532,18 +532,6 @@
       });
     }
 
-    function showForm(focusName) {
-      state = "idle";
-      success.hidden = true;
-      errorBox.hidden = true;
-      fields.hidden = false;
-      preface.hidden = false;
-      submitLabel.textContent = "Запросить демонстрацию";
-      if (focusName) {
-        nameInput.focus();
-      }
-    }
-
     function onSubmit(event) {
       if (event) {
         event.preventDefault();
@@ -583,18 +571,17 @@
       }).then(function () {
         setLocked(false);
         clearFields();
-        fields.hidden = true;
-        preface.hidden = true;
         errorBox.hidden = true;
+        main.hidden = true;
+        preface.hidden = true;
         success.hidden = false;
+        card.classList.add("is-sent");
+        title.textContent = "Заявка отправлена";
         state = "success";
         submitLabel.textContent = "Запросить демонстрацию";
-        successTitle.focus();
+        title.focus();
       }).catch(function () {
         setLocked(false);
-        fields.hidden = false;
-        preface.hidden = false;
-        success.hidden = true;
         errorBox.hidden = false;
         state = "idle";
         submitLabel.textContent = "Повторить отправку";
@@ -603,10 +590,6 @@
     }
 
     form.addEventListener("submit", onSubmit);
-
-    againBtn.addEventListener("click", function () {
-      showForm(true);
-    });
 
     submitBtn.disabled = false;
   }
