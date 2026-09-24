@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Goulash.tech — Доставка под контролем. Даже в час пик</title>
+  <meta name="description" content="Заказы, кухня и курьеры в одной системе для сетей доставки роллов и пиццы.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top"><img class="logo__img" src="assets/img/Goulash.tech-logo.svg" width="1272" height="204" alt="Goulash.tech"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Открыть меню</span>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#orders">Возможности</a>
+        <a href="#network">Для сети</a>
+        <a href="#faq">Вопросы</a>
+        <a class="btn btn--primary" href="#request">Запросить демо</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <noscript>
+      <div class="container">
+        <p class="noscript-note">Без JavaScript вкладки не переключаются, а форма заявки не отправляется. Тексты страницы и первое состояние каждого примера остаются доступны.</p>
+      </div>
+    </noscript>
+
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero__text">
+          <p class="kicker">Для сетей доставки роллов и пиццы</p>
+          <h1>Доставка под контролем.<br> <span class="hero__line">Даже в час пик</span></h1>
+          <p class="hero__lead">Заказы, кухня и курьеры — в одной системе. Планируйте работу с учетом загрузки и показывайте гостям расчетное время доставки.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#orders">Посмотреть возможности</a>
+            <a class="btn btn--secondary" href="#request">Запросить демонстрацию</a>
+          </div>
+        </div>
+
+        <div class="hero__stage">
+          <div class="hero__frame">
+            <article class="erp" aria-label="Пример заказа №2841">
+              <div class="erp__bar">
+                <p class="erp__context">Goulash.tech / Заказ</p>
+                <p class="erp__meta">Центр · Пятница, 19:42</p>
+              </div>
+              <div class="erp__body">
+                <div class="order-intro">
+                  <p class="erp-title">Заказ №2841</p>
+                  <ul class="chips">
+                    <li>Приложение</li>
+                    <li>Филадельфия ×2</li>
+                    <li>На кухне</li>
+                  </ul>
+                </div>
+                <div class="hero-grid">
+                  <div class="path-card">
+                    <ol class="timeline" aria-label="Путь заказа №2841">
+                      <li class="timeline__item timeline__item--done">
+                        <span class="timeline__node" aria-hidden="true"></span>
+                        <span class="timeline__body">
+                          <span class="timeline__title">Принят</span>
+                          <span class="timeline__time">19:25</span>
+                          <span class="timeline__note">Состоялось</span>
+                        </span>
+                      </li>
+                      <li class="timeline__item">
+                        <span class="timeline__node" aria-hidden="true"></span>
+                        <span class="timeline__body">
+                          <span class="timeline__title">Готовность кухни</span>
+                          <span class="timeline__time">19:45</span>
+                          <span class="timeline__note">План</span>
+                        </span>
+                      </li>
+                      <li class="timeline__item">
+                        <span class="timeline__node" aria-hidden="true"></span>
+                        <span class="timeline__body">
+                          <span class="timeline__title">Передача курьеру</span>
+                          <span class="timeline__time">19:48</span>
+                          <span class="timeline__note">План</span>
+                        </span>
+                      </li>
+                      <li class="timeline__item timeline__item--forecast">
+                        <span class="timeline__node" aria-hidden="true"></span>
+                        <span class="timeline__body">
+                          <span class="timeline__title">Доставка гостю</span>
+                          <span class="timeline__time">20:08</span>
+                          <span class="timeline__note">Прогноз</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <aside class="forecast">
+                    <p class="forecast__label">Обещано гостю</p>
+                    <p class="forecast__promised">20:10</p>
+                    <p class="forecast__label forecast__label--accent">Текущий прогноз</p>
+                    <p class="forecast__value">20:08</p>
+                    <p class="forecast__state">
+                      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M5.2 8.1 7.1 10l3.7-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                      <span>Прогноз в пределах обещанного времени</span>
+                    </p>
+                  </aside>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="orders">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__copy">
+            <p class="kicker">01 / Заказы</p>
+            <h2>Разные каналы.<br> Одна очередь заказов.</h2>
+            <p class="feature__lead">Заказы с сайта, приложения, от оператора и подключенных агрегаторов доступны в одной системе. Следите за этапами выполнения и замечайте заказы, требующие внимания.</p>
+            <p class="feature__result">Важные заказы — в поле зрения.</p>
+          </div>
+          <div class="feature__screen">
+            <p class="hint">Переключите вкладки, чтобы посмотреть другой срез.</p>
+            <div class="screen-pad">
+              <div class="erp" data-tab-group>
+                <div class="erp__bar">
+                  <p class="erp__context">Goulash.tech / Заказы</p>
+                  <p class="erp__meta">Центр · Пятница, 19:42</p>
+                </div>
+                <div class="erp__body">
+                  <div class="tabs" role="tablist" aria-label="Срез очереди заказов" data-tabs>
+                    <button class="tabs__tab" id="tab-orders-all" type="button" role="tab" aria-selected="true" aria-controls="panel-orders-all" tabindex="0">Все заказы</button>
+                    <button class="tabs__tab" id="tab-orders-attention" type="button" role="tab" aria-selected="false" aria-controls="panel-orders-attention" tabindex="-1">Требуют внимания</button>
+                  </div>
+                  <div class="panels">
+                    <div class="tab-panel" id="panel-orders-all" role="tabpanel" aria-labelledby="tab-orders-all" tabindex="0">
+                      <div class="queue__head" aria-hidden="true">
+                        <span>Номер</span>
+                        <span>Канал</span>
+                        <span>Статус</span>
+                        <span>Обещано</span>
+                        <span>Прогноз</span>
+                      </div>
+                      <ul class="queue">
+                        <li class="order">
+                          <p class="order__id"><span class="field-name">Номер</span><span>№2841</span></p>
+                          <p class="order__channel"><span class="field-name">Канал</span><span>Приложение</span></p>
+                          <p class="order__status"><span class="field-name">Статус</span><span>На кухне</span></p>
+                          <p class="order__promised"><span class="field-name">Обещано</span><span class="time">20:10</span></p>
+                          <p class="order__forecast"><span class="field-name">Прогноз</span><span class="time">20:08</span></p>
+                        </li>
+                        <li class="order">
+                          <p class="order__id"><span class="field-name">Номер</span><span>№2842</span></p>
+                          <p class="order__channel"><span class="field-name">Канал</span><span>Сайт</span></p>
+                          <p class="order__status"><span class="field-name">Статус</span><span>На сборке</span></p>
+                          <p class="order__promised"><span class="field-name">Обещано</span><span class="time">20:05</span></p>
+                          <p class="order__forecast"><span class="field-name">Прогноз</span><span class="time">19:59</span></p>
+                        </li>
+                        <li class="order order--alert">
+                          <p class="order__id"><span class="field-name">Номер</span><span>№2843</span></p>
+                          <p class="order__channel"><span class="field-name">Канал</span><span>Агрегатор</span></p>
+                          <p class="order__status"><span class="field-name">Статус</span><span>Принят</span></p>
+                          <p class="order__promised"><span class="field-name">Обещано</span><span class="time">20:15</span></p>
+                          <p class="order__forecast"><span class="field-name">Прогноз</span><span class="time time--strong">20:22</span></p>
+                          <p class="order__flag">
+                            <span class="badge">
+                              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                                <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                                <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                              </svg>
+                              Требует внимания
+                            </span>
+                            <span>Прогноз на 7 минут позже обещанного</span>
+                          </p>
+                        </li>
+                        <li class="order">
+                          <p class="order__id"><span class="field-name">Номер</span><span>№2844</span></p>
+                          <p class="order__channel"><span class="field-name">Канал</span><span>Оператор</span></p>
+                          <p class="order__status"><span class="field-name">Статус</span><span>В пути</span></p>
+                          <p class="order__promised"><span class="field-name">Обещано</span><span class="time">20:00</span></p>
+                          <p class="order__forecast"><span class="field-name">Прогноз</span><span class="time">19:52</span></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-panel" id="panel-orders-attention" role="tabpanel" aria-labelledby="tab-orders-attention" tabindex="0" hidden>
+                      <div class="queue__head" aria-hidden="true">
+                        <span>Номер</span>
+                        <span>Канал</span>
+                        <span>Статус</span>
+                        <span>Обещано</span>
+                        <span>Прогноз</span>
+                      </div>
+                      <ul class="queue">
+                        <li class="order order--alert">
+                          <p class="order__id"><span class="field-name">Номер</span><span>№2843</span></p>
+                          <p class="order__channel"><span class="field-name">Канал</span><span>Агрегатор</span></p>
+                          <p class="order__status"><span class="field-name">Статус</span><span>Принят</span></p>
+                          <p class="order__promised"><span class="field-name">Обещано</span><span class="time">20:15</span></p>
+                          <p class="order__forecast"><span class="field-name">Прогноз</span><span class="time time--strong">20:22</span></p>
+                          <p class="order__flag">
+                            <span class="badge">
+                              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                                <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                                <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                              </svg>
+                              Требует внимания
+                            </span>
+                            <span>Прогноз на 7 минут позже обещанного</span>
+                          </p>
+                        </li>
+                      </ul>
+                      <p class="callout">Обещано к 20:15. Текущий прогноз — 20:22. Проверьте выполнение заказа.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kitchen">
+      <div class="container">
+        <div class="feature feature--flip">
+          <div class="feature__copy">
+            <p class="kicker">02 / Кухня</p>
+            <h2>Планируйте кухню.<br> Не только считайте заказы.</h2>
+            <p class="feature__lead">Смотрите загрузку по временным интервалам и направлениям кухни. Понимайте, что уже запланировано и где ближайшие интервалы почти заполнены.</p>
+            <p class="feature__result">Понятно, что кухня готовит сейчас и что запланировано дальше.</p>
+          </div>
+          <div class="feature__screen">
+            <div class="screen-pad screen-pad--cyan">
+              <div class="erp" data-tab-group>
+                <div class="erp__bar">
+                  <p class="erp__context">Goulash.tech / План кухни</p>
+                  <p class="erp__meta">Центр · Пятница, 19:42</p>
+                </div>
+                <div class="erp__body">
+                  <div class="tabs" role="tablist" aria-label="Направление кухни" data-tabs>
+                    <button class="tabs__tab" id="tab-kitchen-rolls" type="button" role="tab" aria-selected="true" aria-controls="panel-kitchen-rolls" tabindex="0">Роллы</button>
+                    <button class="tabs__tab" id="tab-kitchen-pizza" type="button" role="tab" aria-selected="false" aria-controls="panel-kitchen-pizza" tabindex="-1">Пицца</button>
+                  </div>
+                  <div class="panels">
+                    <div class="tab-panel" id="panel-kitchen-rolls" role="tabpanel" aria-labelledby="tab-kitchen-rolls" tabindex="0">
+                      <div class="slots">
+                        <article class="slot slot--limit">
+                          <p class="slot__range">19:30–19:45</p>
+                          <p class="slot__now">Текущий интервал</p>
+                          <p class="slot__pct">95%</p>
+                          <div class="slot__track" aria-hidden="true"><div class="slot__fill" style="--load: 95%"></div></div>
+                          <p class="badge">
+                            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                              <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                              <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                              <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                            </svg>
+                            Близко к лимиту
+                          </p>
+                        </article>
+                        <article class="slot">
+                          <p class="slot__range">19:45–20:00</p>
+                          <p class="slot__now slot__now--empty" aria-hidden="true">Интервал</p>
+                          <p class="slot__pct">80%</p>
+                          <div class="slot__track" aria-hidden="true"><div class="slot__fill" style="--load: 80%"></div></div>
+                        </article>
+                        <article class="slot">
+                          <p class="slot__range">20:00–20:15</p>
+                          <p class="slot__now slot__now--empty" aria-hidden="true">Интервал</p>
+                          <p class="slot__pct">60%</p>
+                          <div class="slot__track" aria-hidden="true"><div class="slot__fill" style="--load: 60%"></div></div>
+                        </article>
+                      </div>
+                      <ul class="tasks">
+                        <li>
+                          <span class="tasks__id">№2841</span>
+                          <span class="tasks__dish">Филадельфия ×2</span>
+                          <span class="tasks__when">План готовности 19:45</span>
+                        </li>
+                        <li>
+                          <span class="tasks__id">№2843</span>
+                          <span class="tasks__dish">Набор роллов</span>
+                          <span class="tasks__when">План готовности 19:49</span>
+                        </li>
+                      </ul>
+                      <p class="load-note">Плановая загрузка относительно настроенной производительности за 15 минут</p>
+                    </div>
+                    <div class="tab-panel" id="panel-kitchen-pizza" role="tabpanel" aria-labelledby="tab-kitchen-pizza" tabindex="0" hidden>
+                      <div class="slots">
+                        <article class="slot">
+                          <p class="slot__range">19:30–19:45</p>
+                          <p class="slot__now">Текущий интервал</p>
+                          <p class="slot__pct">65%</p>
+                          <div class="slot__track" aria-hidden="true"><div class="slot__fill" style="--load: 65%"></div></div>
+                        </article>
+                        <article class="slot">
+                          <p class="slot__range">19:45–20:00</p>
+                          <p class="slot__now slot__now--empty" aria-hidden="true">Интервал</p>
+                          <p class="slot__pct">75%</p>
+                          <div class="slot__track" aria-hidden="true"><div class="slot__fill" style="--load: 75%"></div></div>
+                        </article>
+                        <article class="slot">
+                          <p class="slot__range">20:00–20:15</p>
+                          <p class="slot__now slot__now--empty" aria-hidden="true">Интервал</p>
+                          <p class="slot__pct">50%</p>
+                          <div class="slot__track" aria-hidden="true"><div class="slot__fill" style="--load: 50%"></div></div>
+                        </article>
+                      </div>
+                      <ul class="tasks">
+                        <li>
+                          <span class="tasks__id">№2846</span>
+                          <span class="tasks__dish">Пепперони ×1</span>
+                          <span class="tasks__when">План готовности 19:46</span>
+                        </li>
+                        <li>
+                          <span class="tasks__id">№2847</span>
+                          <span class="tasks__dish">Маргарита ×2</span>
+                          <span class="tasks__when">План готовности 19:50</span>
+                        </li>
+                      </ul>
+                      <p class="load-note">Плановая загрузка относительно настроенной производительности за 15 минут</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="delivery">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__copy">
+            <p class="kicker">03 / Доставка</p>
+            <h2>Планируйте рейс,<br> пока заказ еще на кухне.</h2>
+            <p class="feature__lead">Связывайте готовность заказов с доступностью курьеров. Смотрите состав рейса, план выезда и расчетное время доставки каждому гостю.</p>
+            <p class="feature__result">Кухня и доставка работают по связанному плану.</p>
+          </div>
+          <div class="feature__screen">
+            <div class="screen-pad">
+              <div class="erp" data-tab-group>
+                <div class="erp__bar">
+                  <p class="erp__context">Goulash.tech / План рейса</p>
+                  <p class="erp__meta">Центр · Пятница, 19:42</p>
+                </div>
+                <div class="erp__body">
+                  <div class="tabs" role="tablist" aria-label="Рейс" data-tabs>
+                    <button class="tabs__tab" id="tab-delivery-near" type="button" role="tab" aria-selected="true" aria-controls="panel-delivery-near" tabindex="0">Ближайший рейс</button>
+                    <button class="tabs__tab" id="tab-delivery-next" type="button" role="tab" aria-selected="false" aria-controls="panel-delivery-next" tabindex="-1">Следующий рейс</button>
+                  </div>
+                  <div class="panels">
+                    <div class="tab-panel" id="panel-delivery-near" role="tabpanel" aria-labelledby="tab-delivery-near" tabindex="0">
+                      <div class="trip-layout">
+                        <div class="trip-main">
+                          <div class="trip-card">
+                            <p class="trip-card__label">Рейс</p>
+                            <p class="trip-card__id">№06</p>
+                            <dl class="trip-facts">
+                              <div><dt>Курьер</dt><dd>№6</dd></div>
+                              <div><dt>Ожидается на филиале</dt><dd class="time">19:46</dd></div>
+                              <div><dt>План выезда</dt><dd class="time">19:48</dd></div>
+                            </dl>
+                          </div>
+                          <ul class="legs">
+                            <li class="leg">
+                              <p class="leg__id">№2841</p>
+                              <p class="leg__line"><span>Готовность</span><span class="time">19:45</span></p>
+                              <p class="leg__line"><span>Прогноз доставки</span><span class="time">20:08</span></p>
+                            </li>
+                            <li class="leg">
+                              <p class="leg__id">№2846</p>
+                              <p class="leg__line"><span>Готовность</span><span class="time">19:46</span></p>
+                              <p class="leg__line"><span>Прогноз доставки</span><span class="time">20:16</span></p>
+                            </li>
+                          </ul>
+                          <p class="trip-return"><span>План возвращения</span><span class="time">20:35</span></p>
+                        </div>
+                        <div class="scheme">
+                          <p class="scheme__title">Схема рейса</p>
+                          <ol class="route">
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">Центр</span>
+                                <span class="route__when">План выезда 19:48</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">№2841</span>
+                                <span class="route__role">Первый заказ</span>
+                                <span class="route__when">Прогноз 20:08</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">№2846</span>
+                                <span class="route__role">Второй заказ</span>
+                                <span class="route__when">Прогноз 20:16</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">Центр</span>
+                                <span class="route__when">План возвращения 20:35</span>
+                              </span>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-panel" id="panel-delivery-next" role="tabpanel" aria-labelledby="tab-delivery-next" tabindex="0" hidden>
+                      <div class="trip-layout">
+                        <div class="trip-main">
+                          <div class="trip-card">
+                            <p class="trip-card__label">Рейс</p>
+                            <p class="trip-card__id">№07</p>
+                            <dl class="trip-facts">
+                              <div><dt>Курьер</dt><dd>№7</dd></div>
+                              <div><dt>Ожидается на филиале</dt><dd class="time">19:50</dd></div>
+                              <div><dt>План выезда</dt><dd class="time">19:52</dd></div>
+                            </dl>
+                          </div>
+                          <ul class="legs">
+                            <li class="leg">
+                              <p class="leg__id">№2843</p>
+                              <p class="leg__line"><span>Готовность</span><span class="time">19:49</span></p>
+                              <p class="leg__line"><span>Прогноз доставки</span><span class="time">20:22</span></p>
+                            </li>
+                            <li class="leg">
+                              <p class="leg__id">№2847</p>
+                              <p class="leg__line"><span>Готовность</span><span class="time">19:50</span></p>
+                              <p class="leg__line"><span>Прогноз доставки</span><span class="time">20:30</span></p>
+                            </li>
+                          </ul>
+                          <p class="trip-return"><span>План возвращения</span><span class="time">20:48</span></p>
+                        </div>
+                        <div class="scheme">
+                          <p class="scheme__title">Схема рейса</p>
+                          <ol class="route">
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">Центр</span>
+                                <span class="route__when">План выезда 19:52</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">№2843</span>
+                                <span class="route__role">Первый заказ</span>
+                                <span class="route__when">Прогноз 20:22</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">№2847</span>
+                                <span class="route__role">Второй заказ</span>
+                                <span class="route__when">Прогноз 20:30</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="route__node" aria-hidden="true"></span>
+                              <span class="route__body">
+                                <span class="route__place">Центр</span>
+                                <span class="route__when">План возвращения 20:48</span>
+                              </span>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="network">
+      <div class="container">
+        <div class="feature feature--flip">
+          <div class="feature__copy">
+            <p class="kicker">04 / Управление сетью</p>
+            <h2>Видно всю сеть.<br> Понятно, где разобраться.</h2>
+            <p class="feature__lead">Сравнивайте работу кухни и доставки по филиалам. Находите отклонения и переходите от общего впечатления к конкретной точке и показателю.</p>
+          </div>
+          <div class="feature__screen">
+            <div class="screen-pad screen-pad--cyan">
+              <div class="erp" data-tab-group>
+                <div class="erp__bar">
+                  <p class="erp__context">Goulash.tech / Показатели филиалов</p>
+                  <p class="erp__meta">Текущая смена · до 19:42</p>
+                </div>
+                <div class="erp__body">
+                  <div class="tabs" role="tablist" aria-label="Показатель филиалов" data-tabs>
+                    <button class="tabs__tab" id="tab-network-kitchen" type="button" role="tab" aria-selected="true" aria-controls="panel-network-kitchen" tabindex="0">Кухня</button>
+                    <button class="tabs__tab" id="tab-network-delivery" type="button" role="tab" aria-selected="false" aria-controls="panel-network-delivery" tabindex="-1">Доставка</button>
+                  </div>
+                  <div class="panels">
+                    <div class="tab-panel" id="panel-network-kitchen" role="tabpanel" aria-labelledby="tab-network-kitchen" tabindex="0">
+                      <div class="metric-head">
+                        <p class="metric-head__title">Среднее время приготовления</p>
+                        <p class="metric-head__note">По приготовленным заказам за смену</p>
+                      </div>
+                      <p class="sr-only">Шкала от 0 до 30 минут.</p>
+                      <div class="scale" aria-hidden="true">
+                        <span>0</span>
+                        <span>15</span>
+                        <span>30 мин</span>
+                      </div>
+                      <div class="metrics">
+                        <div class="metric metric--max">
+                          <span class="metric__name">Центр</span>
+                          <span class="metric__value">22 мин</span>
+                          <div class="metric__track" aria-hidden="true"><div class="metric__fill metric__fill--max" style="--load: 73.333%"></div></div>
+                        </div>
+                        <div class="metric">
+                          <span class="metric__name">Север</span>
+                          <span class="metric__value">14 мин</span>
+                          <div class="metric__track" aria-hidden="true"><div class="metric__fill" style="--load: 46.667%"></div></div>
+                        </div>
+                        <div class="metric">
+                          <span class="metric__name">Юг</span>
+                          <span class="metric__value">17 мин</span>
+                          <div class="metric__track" aria-hidden="true"><div class="metric__fill" style="--load: 56.667%"></div></div>
+                        </div>
+                      </div>
+                      <p class="callout">У “Центра” самое долгое среднее приготовление в этом примере. Стоит проверить работу кухни.</p>
+                    </div>
+                    <div class="tab-panel" id="panel-network-delivery" role="tabpanel" aria-labelledby="tab-network-delivery" tabindex="0" hidden>
+                      <div class="metric-head">
+                        <p class="metric-head__title">Среднее время от принятия до вручения</p>
+                        <p class="metric-head__note">По доставленным заказам за смену</p>
+                      </div>
+                      <p class="sr-only">Шкала от 0 до 60 минут.</p>
+                      <div class="scale" aria-hidden="true">
+                        <span>0</span>
+                        <span>30</span>
+                        <span>60 мин</span>
+                      </div>
+                      <div class="metrics">
+                        <div class="metric metric--max">
+                          <span class="metric__name">Центр</span>
+                          <span class="metric__value">54 мин</span>
+                          <div class="metric__track" aria-hidden="true"><div class="metric__fill metric__fill--max" style="--load: 90%"></div></div>
+                        </div>
+                        <div class="metric">
+                          <span class="metric__name">Север</span>
+                          <span class="metric__value">39 мин</span>
+                          <div class="metric__track" aria-hidden="true"><div class="metric__fill" style="--load: 65%"></div></div>
+                        </div>
+                        <div class="metric">
+                          <span class="metric__name">Юг</span>
+                          <span class="metric__value">46 мин</span>
+                          <div class="metric__track" aria-hidden="true"><div class="metric__fill" style="--load: 76.667%"></div></div>
+                        </div>
+                      </div>
+                      <p class="callout">У “Центра” самое большое среднее время выполнения заказа. Начните проверку с процессов этого филиала.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="case">
+      <div class="container case">
+        <div class="case__intro">
+          <p class="kicker">Опыт клиента · материал Goulash</p>
+          <h2>Как FoodGarden<br> перестроили работу доставки</h2>
+          <p class="feature__lead">В опубликованном кейсе сеть рассказывает об изменениях в работе кухни, упаковки и доставки после перехода на Goulash.</p>
+        </div>
+        <div class="case__body">
+          <ol class="process" aria-label="Последовательность изменений в кейсе">
+            <li>Кухня</li>
+            <li>Упаковка</li>
+            <li>Доставка</li>
+          </ol>
+          <p class="case__note">Описанный опыт связан с комплексом изменений в бизнесе, а не только с установкой программы.</p>
+          <a class="btn btn--secondary" href="https://goulash.tech/blog/foodgarden-case/" target="_blank" rel="noopener noreferrer">Читать кейс на сайте Goulash ↗<span class="sr-only"> (откроется в новой вкладке)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>Перед знакомством с продуктом</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>
+              <span>Это настоящий интерфейс Goulash?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>Это авторская визуализация возможностей продукта для тестового задания. Данные условные, интерфейс не является точной копией действующей системы.</p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              <span>Система гарантирует отсутствие задержек?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>Нет. Планирование помогает видеть ограничения кухни и доставки. При недостатке ресурсов расчетное время выполнения новых заказов может увеличиваться.</p>
+          </details>
+          <details class="faq__item">
+            <summary>
+              <span>Как узнать условия подключения?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p>Стоимость, сроки и интеграции для конкретной сети нужно обсуждать с командой Goulash. Этот демонстрационный лендинг не устанавливает условия внедрения.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="request">
+      <div class="request__panel">
+        <div class="container">
+          <div class="form-card">
+            <div class="form-card__intro">
+              <h2 id="request-title">Что произойдет в вашей сети<br> в следующую пятницу?</h2>
+              <div id="form-preface">
+                <p class="feature__lead">Начните с вашей ситуации: сколько у вас точек и как связаны кухня и доставка.</p>
+              </div>
+            </div>
+            <div class="form-card__main">
+              <form id="lead-form" method="post" action="" novalidate onsubmit="return false;" aria-labelledby="request-title">
+                <div id="form-fields">
+                  <div class="field">
+                    <label for="lead-name">Имя</label>
+                    <input id="lead-name" name="name" type="text" autocomplete="name" maxlength="60" aria-invalid="false">
+                    <p class="field__error" id="lead-name-error" hidden>
+                      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label for="lead-phone">Телефон</label>
+                    <input id="lead-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" autocapitalize="off" maxlength="18" placeholder="+7 (___) ___-__-__" aria-invalid="false">
+                    <p class="field__error" id="lead-phone-error" hidden>
+                      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label for="lead-company">Название компании</label>
+                    <input id="lead-company" name="company" type="text" autocomplete="organization" maxlength="100" aria-invalid="false">
+                    <p class="field__error" id="lead-company-error" hidden>
+                      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label for="lead-city">Город</label>
+                    <input id="lead-city" name="city" type="text" autocomplete="address-level2" maxlength="60" aria-invalid="false">
+                    <p class="field__error" id="lead-city-error" hidden>
+                      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label for="lead-locations">Количество точек</label>
+                    <select id="lead-locations" name="locations" aria-invalid="false">
+                      <option value="">Выберите количество</option>
+                      <option value="2-5">2–5</option>
+                      <option value="6-15">6–15</option>
+                      <option value="16-plus">16 и больше</option>
+                    </select>
+                    <p class="field__error" id="lead-locations-error" hidden>
+                      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+                        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M8 4.7v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M8 11.15h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+                      </svg>
+                      <span data-error-text></span>
+                    </p>
+                  </div>
+                  <div class="form-banner" id="form-error" hidden tabindex="-1">
+                    <h3 tabindex="-1" id="form-error-title">Не удалось отправить заявку</h3>
+                    <p>Проверьте подключение к интернету и попробуйте еще раз. Введенные данные сохранены.</p>
+                  </div>
+                  <button class="btn btn--primary btn--block" id="lead-submit" type="submit" disabled>
+                    <span class="spinner" id="lead-spinner" hidden aria-hidden="true"></span>
+                    <span id="lead-submit-label">Запросить демонстрацию</span>
+                  </button>
+                </div>
+                <div class="form-success" id="form-success" hidden>
+                  <h3 tabindex="-1" id="form-success-title">Заявка отправлена</h3>
+                  <p>Спасибо! Мы свяжемся с вами в ближайшее время, чтобы договориться о демонстрации.</p>
+                  <button class="btn btn--secondary" id="form-again" type="button">Отправить еще одну заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand"><img class="footer__logo" src="assets/img/Goulash.tech-logo.svg" width="1272" height="204" alt="Goulash.tech"></p>
+      <p class="footer__note">Концепт для тестового задания. Неофициальный лендинг.</p>
+      <a class="footer__link" href="https://goulash.tech/" target="_blank" rel="noopener noreferrer">Официальный сайт ↗<span class="sr-only"> (откроется в новой вкладке)</span></a>    </div>
+  </footer>
+</body>
+</html>
